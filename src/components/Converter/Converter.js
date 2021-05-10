@@ -1,9 +1,8 @@
-import { useState } from 'react'
+import { useConverter } from './useConverter'
 import styles from './Converter.module.css'
 
 function Converter() {
-  const [rub, setRub] = useState(100)
-  const [usd, setUSD] = useState(42)
+  const { usd, rub, updateRub, updateUsd} = useConverter()
 
   return (
     <form className={styles.converter}>
@@ -15,7 +14,7 @@ function Converter() {
           min='0'
           step='1'
           value={rub}
-          onChange={(e) => setRub(e.target.value)}
+          onChange={(e) => updateRub(e.target.value)}
         />
       </label>
 
@@ -27,7 +26,7 @@ function Converter() {
           min='0'
           step='1'
           value={usd}
-          onChange={(e) => setUSD(e.target.value)}
+          onChange={(e) => updateUsd(e.target.value)}
         />
       </label>
     </form>
