@@ -2,7 +2,7 @@ import { useConverter } from './useConverter'
 import styles from './Converter.module.css'
 
 function Converter() {
-  const { usd, rub, updateRub, updateUsd} = useConverter()
+  const { usd, rub, updateRub, updateUsd} = useConverter(100, 42)
 
   return (
     <form className={styles.converter}>

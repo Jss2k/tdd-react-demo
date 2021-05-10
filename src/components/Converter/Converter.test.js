@@ -10,7 +10,7 @@ describe('when rendered', () => {
 
   it('usd input should have a value with a usd amount', () => {
     render(<Converter />)
-    expect(screen.getByLabelText(/Сумма в долларах/)).toHaveValue(42)
+    expect(screen.getByLabelText(/Сумма в долларах/)).toHaveValue(2.38)
   })
 })
 
