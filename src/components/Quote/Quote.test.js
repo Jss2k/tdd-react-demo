@@ -8,13 +8,13 @@ describe('when rendered', () => {
 
   it('should contain an expected text', () => {
     render(<Quote quote={quoteStub} />)
-    const result = screen.queryByText(new RegExp(text))
+    const result = screen.getByText(new RegExp(text))
     expect(result).toBeInTheDocument()
   })
 
   it('should contain an expected author', () => {
     render(<Quote quote={quoteStub} />)
-    const result = screen.queryByText(new RegExp(author))
+    const result = screen.getByText(new RegExp(author))
     expect(result).toBeInTheDocument()
   })
 })
